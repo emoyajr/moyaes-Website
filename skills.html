@@ -1,64 +1,166 @@
-<!-- Skills Content -->
+
+<!-- ==================== skills.html ==================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Your Name</div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="presentations.html">Presentations</a></li>
+                <li><a href="skills.html" class="active">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Skills</h1>
+        <p>Technical expertise, programming languages, and research methods</p>
+    </div>
+
+    <!-- Skills Content -->
     <section class="content-section">
-        <div class="skills-list-container">
-            <div class="skill-category-list">
+        <div class="skills-grid">
+            <div class="skill-category">
                 <h3>Programming Languages</h3>
-                <ul class="skill-list">
-                    <li>Python</li>
-                    <li>MATLAB</li>
-                    <li>JavaScript</li>
-                    <li>Java</li>
-                    <li>C++</li>
-                    <li>R</li>
-                </ul>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Python</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>MATLAB</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>JavaScript</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Java</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="skill-category-list">
-                <h3>Machine Learning & AI</h3>
-                <ul class="skill-list">
-                    <li>TensorFlow</li>
-                    <li>PyTorch</li>
-                    <li>Scikit-learn</li>
-                    <li>Neural Networks</li>
-                    <li>Deep Learning</li>
-                    <li>Computer Vision</li>
-                </ul>
+            <div class="skill-category">
+                <h3>Technical Skills</h3>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Machine Learning</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Data Analysis</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Numerical Methods</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Statistical Analysis</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="skill-category-list">
-                <h3>Data Analysis & Visualization</h3>
-                <ul class="skill-list">
-                    <li>NumPy</li>
-                    <li>Pandas</li>
-                    <li>Matplotlib</li>
-                    <li>Seaborn</li>
-                    <li>Statistical Analysis</li>
-                    <li>Data Mining</li>
-                </ul>
-            </div>
-            
-            <div class="skill-category-list">
-                <h3>Tools & Technologies</h3>
-                <ul class="skill-list">
-                    <li>Git/GitHub</li>
-                    <li>Docker</li>
-                    <li>LaTeX</li>
-                    <li>Jupyter Notebook</li>
-                    <li>Linux/Unix</li>
-                    <li>VS Code</li>
-                </ul>
-            </div>
-            
-            <div class="skill-category-list">
-                <h3>Research & Methods</h3>
-                <ul class="skill-list">
-                    <li>Numerical Methods</li>
-                    <li>Algorithm Design</li>
-                    <li>Mathematical Modeling</li>
-                    <li>Computational Physics</li>
-                    <li>Scientific Computing</li>
-                    <li>Technical Writing</li>
-                </ul>
+            <div class="skill-category">
+                <h3>Tools & Frameworks</h3>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>TensorFlow</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Git/GitHub</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>LaTeX</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Docker</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Edgar Samuel Moya. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; opacity: 0.8;">University of California, Merced</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
