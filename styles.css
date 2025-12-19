@@ -52,12 +52,12 @@ nav a {
 
 nav a:hover,
 nav a.active {
-    color: #667eea;
+    color: #2193b0;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);
     color: white;
     padding: 8rem 2rem 4rem;
     text-align: center;
@@ -79,7 +79,7 @@ nav a.active {
 .hero .cta-button {
     display: inline-block;
     background: white;
-    color: #667eea;
+    color: #2193b0;
     padding: 0.9rem 2rem;
     text-decoration: none;
     border-radius: 5px;
@@ -94,7 +94,7 @@ nav a.active {
 
 /* Page Header (for other pages) */
 .page-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);
     color: white;
     padding: 6rem 2rem 3rem;
     text-align: center;
@@ -124,7 +124,7 @@ nav a.active {
 }
 
 .intro-section h2 {
-    color: #2c3e50;
+    color: #1a5f7a;
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
@@ -143,9 +143,10 @@ nav a.active {
 }
 
 .highlight-item h4 {
-    color: #667eea;
+    color: #2193b0;
     margin-bottom: 0.5rem;
 }
+
 .intro-content {
     display: flex;
     gap: 3rem;
@@ -169,7 +170,7 @@ nav a.active {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -188,6 +189,7 @@ nav a.active {
         order: -1;
     }
 }
+
 .profile-img {
     width: 200px;
     height: 200px;
@@ -206,7 +208,7 @@ nav a.active {
     text-align: center;
     font-size: 2.2rem;
     margin-bottom: 3rem;
-    color: #2c3e50;
+    color: #1a5f7a;
 }
 
 .cards-grid {
@@ -232,7 +234,7 @@ nav a.active {
 }
 
 .card h3 {
-    color: #2c3e50;
+    color: #1a5f7a;
     font-size: 1.4rem;
     margin-bottom: 1rem;
 }
@@ -267,11 +269,11 @@ nav a.active {
     margin-bottom: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    border-left: 4px solid #667eea;
+    border-left: 4px solid #2193b0;
 }
 
 .item-card h3 {
-    color: #2c3e50;
+    color: #1a5f7a;
     margin-bottom: 0.8rem;
     font-size: 1.3rem;
 }
@@ -308,12 +310,12 @@ nav a.active {
 }
 
 .project-card h3 {
-    color: #2c3e50;
+    color: #1a5f7a;
     margin-bottom: 0.8rem;
 }
 
 .project-tech {
-    color: #667eea;
+    color: #2193b0;
     font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 0.8rem;
@@ -322,7 +324,7 @@ nav a.active {
 .project-link {
     display: inline-block;
     margin-top: 1rem;
-    color: #667eea;
+    color: #2193b0;
     text-decoration: none;
     font-weight: 600;
 }
@@ -331,7 +333,6 @@ nav a.active {
     text-decoration: underline;
 }
 
-/* Skills Grid */
 /* Skills List Layout */
 .skills-list-container {
     display: grid;
@@ -349,11 +350,11 @@ nav a.active {
 }
 
 .skill-category-list h3 {
-    color: #2c3e50;
+    color: #1a5f7a;
     font-size: 1.3rem;
     margin-bottom: 1.5rem;
     padding-bottom: 0.75rem;
-    border-bottom: 2px solid #3498db;
+    border-bottom: 2px solid #2193b0;
 }
 
 .skill-list {
@@ -375,7 +376,7 @@ nav a.active {
     content: "→";
     position: absolute;
     left: 0;
-    color: #3498db;
+    color: #2193b0;
     font-weight: bold;
 }
 
@@ -384,7 +385,7 @@ nav a.active {
 }
 
 .skill-list li:hover {
-    color: #3498db;
+    color: #2193b0;
     padding-left: 2rem;
 }
 
@@ -422,13 +423,13 @@ nav a.active {
 }
 
 .contact-item h3 {
-    color: #2c3e50;
+    color: #1a5f7a;
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
 }
 
 .contact-item a {
-    color: #667eea;
+    color: #2193b0;
     text-decoration: none;
 }
 
@@ -438,7 +439,7 @@ nav a.active {
 
 /* Footer */
 footer {
-    background: #2c3e50;
+    background: #1a5f7a;
     color: white;
     text-align: center;
     padding: 2rem;
