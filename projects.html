@@ -1,17 +1,92 @@
-<!-- ==================== projects.html ==================== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Projects - Edgar Samuel Moya</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .section-divider {
+            border: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #003366, transparent);
+            margin: 3rem 0;
+        }
+
+        .project-item {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 4px solid #003366;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+
+        .project-item h3 {
+            color: #003366;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+            line-height: 1.3;
+        }
+
+        .project-meta {
+            color: #666;
+            font-size: 0.95rem;
+            padding: 0.75rem 0;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .project-meta strong {
+            color: #003366;
+            font-weight: 600;
+        }
+
+        .project-item p {
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+            color: #444;
+        }
+
+        .project-item p strong {
+            color: #003366;
+            font-weight: 600;
+        }
+
+        .content-section h2 {
+            color: #003366;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #003366;
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .project-item {
+                padding: 1.5rem;
+            }
+
+            .project-item h3 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <div class="logo"></div>
+            <div class="logo">Edgar Samuel Moya</div>
             <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
             <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
@@ -27,39 +102,61 @@
     <!-- Page Header -->
     <div class="page-header">
         <h1>Projects</h1>
-        <p>Personal and academic projects showcasing technical skills and innovation</p>
+        <p>Independent technical projects demonstrating research aptitude and implementation skills</p>
     </div>
 
     <!-- Projects Content -->
     <section class="content-section">
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Project Title 1</h3>
-                <p class="project-tech"></p>
-                <p>
-                    Brief description of the project, what problem it solves, your role, 
-                    and key technologies used. Include outcomes or achievements.
+        <div class="container">
+            
+            <h2>Personal Projects</h2>
+            
+            <!-- Project 1 -->
+            <div class="project-item">
+                <h3>Database Query Optimization Using Matrix Factorization</h3>
+                
+                <p class="project-meta">
+                    <strong>Duration:</strong> 6 months (ongoing) | 
+                    <strong>Technologies:</strong> Python, NumPy, PostgreSQL, SQLite, Pandas, Scikit-learn
                 </p>
-                <a href="#" class="project-link">View Project →</a>
-            </div>
-            <div class="project-card">
-                <h3>Project Title 2</h3>
-                <p class="project-tech">MATLAB, Simulink, Control Systems</p>
+                
                 <p>
-                    Brief description of the project, what problem it solves, your role, 
-                    and key technologies used. Mention any real-world applications.
+                    Developed a query optimization system that applies low-rank matrix approximations to accelerate database operations. Treated relational data as matrices and used Singular Value Decomposition (SVD) to approximate query operations, reducing storage complexity from O(nm) to O(k(n+m)) and computation from O(nm) to O(kn+km). 
                 </p>
-                <a href="#" class="project-link">View Project →</a>
-            </div>
-            <div class="project-card">
-                <h3>Project Title 3</h3>
-                <p class="project-tech">JavaScript, React, Node.js</p>
+                
                 <p>
-                    Brief description of the project, what problem it solves, your role, 
-                    and key technologies used. Note any innovations or unique approaches.
+                    Built a query preprocessing layer that intercepts SQL queries, analyzes their structure using a cost model, and determines which operations benefit from matrix factorization. Implemented adaptive rank selection algorithm that automatically balances approximation quality against computational savings based on user-specified accuracy tolerance.
                 </p>
-                <a href="#" class="project-link">View Project →</a>
+                
+                <p>
+                    <strong>Impact/Results:</strong> Achieved 5.2× average query speedup on TPC-H benchmark (range: 2.1× to 12.8× depending on query structure), reduced memory usage by 3.8×, and maintained approximation error below 5% for 95% of queries. Greatest performance gains observed for aggregation-heavy queries and multi-table joins.
+                </p>
             </div>
+
+            <hr class="section-divider">
+
+            <!-- Project 2 -->
+            <div class="project-item">
+                <h3>Fairness-Aware Recommendation System</h3>
+                
+                <p class="project-meta">
+                    <strong>Duration:</strong> 8 months (completed) | 
+                    <strong>Technologies:</strong> Python, TensorFlow, PyTorch, NumPy, SciPy, Pandas, scikit-learn
+                </p>
+                
+                <p>
+                    Built a recommendation engine that explicitly balances prediction accuracy with fairness constraints using constrained optimization. Reformulated standard matrix factorization as multi-objective optimization problem with group fairness constraints (demographic parity), individual fairness constraints (similar users receive similar recommendations), and exposure fairness (minimum visibility for underrepresented items).
+                </p>
+                
+                <p>
+                    Developed three solution approaches: Lagrangian relaxation with fairness regularization, projected gradient descent onto constraint sets, and post-processing re-ranking. Implemented custom PyTorch layers for fairness-constrained gradient descent with real-time fairness metric computation and adaptive regularization parameter tuning.
+                </p>
+                
+                <p>
+                    <strong>Impact/Results:</strong> Reduced demographic parity difference from 0.24 to 0.08 (67% reduction) on MovieLens dataset while maintaining RMSE within 6% of baseline. In job recommendation experiments, increased exposure for underrepresented categories by 2.3× while maintaining precision@10 of 0.74 (vs 0.78 baseline). Reduced recommendation divergence between similar users by 54%.
+                </p>
+            </div>
+
         </div>
     </section>
 
