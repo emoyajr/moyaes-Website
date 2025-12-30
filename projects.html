@@ -133,29 +133,6 @@
             </div>
 
             <hr class="section-divider">
-
-            <!-- Project 2 -->
-            <div class="project-item">
-                <h3>Fairness-Aware Recommendation System</h3>
-                
-                <p class="project-meta">
-                    <strong>Duration:</strong> 8 months (completed) | 
-                    <strong>Technologies:</strong> Python, TensorFlow, PyTorch, NumPy, SciPy, Pandas, scikit-learn
-                </p>
-                
-                <p>
-                    Built a recommendation engine that explicitly balances prediction accuracy with fairness constraints using constrained optimization. Reformulated standard matrix factorization as multi-objective optimization problem with group fairness constraints (demographic parity), individual fairness constraints (similar users receive similar recommendations), and exposure fairness (minimum visibility for underrepresented items).
-                </p>
-                
-                <p>
-                    Developed three solution approaches: Lagrangian relaxation with fairness regularization, projected gradient descent onto constraint sets, and post-processing re-ranking. Implemented custom PyTorch layers for fairness-constrained gradient descent with real-time fairness metric computation and adaptive regularization parameter tuning.
-                </p>
-                
-                <p>
-                    <strong>Impact/Results:</strong> Reduced demographic parity difference from 0.24 to 0.08 (67% reduction) on MovieLens dataset while maintaining RMSE within 6% of baseline. In job recommendation experiments, increased exposure for underrepresented categories by 2.3× while maintaining precision@10 of 0.74 (vs 0.78 baseline). Reduced recommendation divergence between similar users by 54%.
-                </p>
-            </div>
-
         </div>
     </section>
 
