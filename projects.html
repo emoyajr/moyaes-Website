@@ -5,82 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Edgar Samuel Moya</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .section-divider {
-            border: 0;
-            height: 2px;
-            background: linear-gradient(to right, transparent, #003366, transparent);
-            margin: 3rem 0;
-        }
-
-        .project-item {
-            background: #ffffff;
-            border-radius: 8px;
-            padding: 2.5rem;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            border-left: 4px solid #003366;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-        }
-
-        .project-item h3 {
-            color: #003366;
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            letter-spacing: -0.5px;
-            line-height: 1.3;
-        }
-
-        .project-meta {
-            color: #666;
-            font-size: 0.95rem;
-            padding: 0.75rem 0;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .project-meta strong {
-            color: #003366;
-            font-weight: 600;
-        }
-
-        .project-item p {
-            line-height: 1.8;
-            margin-bottom: 1.2rem;
-            color: #444;
-        }
-
-        .project-item p strong {
-            color: #003366;
-            font-weight: 600;
-        }
-
-        .content-section h2 {
-            color: #003366;
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 3px solid #003366;
-            display: inline-block;
-        }
-
-        @media (max-width: 768px) {
-            .project-item {
-                padding: 1.5rem;
-            }
-
-            .project-item h3 {
-                font-size: 1.3rem;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -98,42 +22,49 @@
             </ul>
         </div>
     </nav>
+
     <!-- Page Header -->
     <div class="page-header">
         <h1>Projects</h1>
-        <p>Independent technical projects demonstrating research aptitude and implementation skills</p>
+        <p>Data engineering projects demonstrating real-time systems and performance optimization</p>
     </div>
 
     <!-- Projects Content -->
     <section class="content-section">
-        <div class="container">
-            
-            <h2>Personal Projects</h2>
-            
-            <!-- Project 1 -->
-            <div class="project-item">
-                <h3>Database Query Optimization Using Matrix Factorization</h3>
-                
-                <p class="project-meta">
-                    <strong>Duration:</strong> 6 months (ongoing) | 
-                    <strong>Technologies:</strong> Python, NumPy, PostgreSQL, SQLite, Pandas, Scikit-learn
-                </p>
-                
-                <p>
-                    Developed a query optimization system that applies low-rank matrix approximations to accelerate database operations. Treated relational data as matrices and used Singular Value Decomposition (SVD) to approximate query operations, reducing storage complexity from O(nm) to O(k(n+m)) and computation from O(nm) to O(kn+km). 
-                </p>
-                
-                <p>
-                    Built a query preprocessing layer that intercepts SQL queries, analyzes their structure using a cost model, and determines which operations benefit from matrix factorization. Implemented adaptive rank selection algorithm that automatically balances approximation quality against computational savings based on user-specified accuracy tolerance.
-                </p>
-                
-                <p>
-                    <strong>Impact/Results:</strong> Achieved 5.2× average query speedup on TPC-H benchmark (range: 2.1× to 12.8× depending on query structure), reduced memory usage by 3.8×, and maintained approximation error below 5% for 95% of queries. Greatest performance gains observed for aggregation-heavy queries and multi-table joins.
-                </p>
-            </div>
+        <h2>Projects In Development</h2>
 
-            <hr class="section-divider">
+        <!-- Project 1: Real-Time Fraud Detection -->
+        <div class="project-card">
+            <h3>Real-Time E-Commerce Fraud Detection Pipeline</h3>
+            <p class="project-meta">
+                <strong>Status:</strong> In Progress (March - July 2025) | 
+                <strong>Technologies:</strong> Python, Kafka, Spark Streaming, AWS, PostgreSQL, Redis, Docker
+            </p>
+            
+            <p>Building a real-time fraud detection system to process e-commerce transactions and identify suspicious activity as it occurs. The pipeline uses Apache Kafka for data streaming, Spark Streaming for real-time processing, and a dual-storage architecture with PostgreSQL for transaction history and Redis for high-speed lookups.</p>
+            
+            <p>Implementing fraud detection algorithms that analyze transaction velocity, geographic patterns, purchase amounts, and behavioral anomalies. The system combines rule-based detection with statistical analysis to flag high-risk transactions for review.</p>
+            
+            <p><strong>Current Status:</strong> Developing core pipeline architecture and fraud detection logic. Performance metrics and results will be documented upon project completion.</p>
         </div>
+
+        <hr style="margin: 3rem 0; border: none; border-top: 1px solid #e0e0e0;">
+
+        <!-- Project 2: Database Optimization Study -->
+        <div class="project-card">
+            <h3>Database Performance Optimization Study</h3>
+            <p class="project-meta">
+                <strong>Status:</strong> Planned (August - November 2025) | 
+                <strong>Technologies:</strong> PostgreSQL, ClickHouse, Python, Docker, Jupyter Notebooks
+            </p>
+            
+            <p>Planning a comprehensive performance comparison of row-based (PostgreSQL) and columnar (ClickHouse) database architectures for analytics workloads. The study will use large-scale datasets to systematically evaluate query performance, storage efficiency, and optimization strategies.</p>
+            
+            <p>Will test multiple optimization techniques including indexing strategies, partitioning schemes, compression algorithms, and query tuning approaches. The research will measure performance across different workload patterns and data scales to understand real-world behavior and trade-offs.</p>
+            
+            <p><strong>Current Status:</strong> Research design and methodology in development. Benchmarking framework and detailed results will be published upon completion.</p>
+        </div>
+
     </section>
 
     <!-- Footer -->
