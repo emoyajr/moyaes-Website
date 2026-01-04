@@ -4,90 +4,283 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Edgar Samuel Moya</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin: 2rem 0 1.5rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .project {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .project h3 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .status {
+            background-color: #e8f4f8;
+            color: #2c3e50;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .tech-tags {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .project p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .current-status {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-left: 4px solid #3498db;
+            margin-top: 1rem;
+        }
+
+        .current-status strong {
+            color: #2c3e50;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e0e0e0;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #2c3e50;
+                padding: 1rem 2rem;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .project-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <div class="logo"></div>
-            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+    <header>
+        <nav>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
             <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <!--<li><a href="certifications.html">Certifications</a></li>  -->
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Page Header -->
-    <div class="page-header">
+    <main>
         <h1>Projects</h1>
-        <p>Data engineering projects demonstrating real-time systems and performance optimization</p>
-    </div>
+        <p class="subtitle">Data engineering projects demonstrating end-to-end pipelines, cloud warehousing, and database optimization</p>
 
-    <!-- Projects Content -->
-    <section class="content-section">
         <h2>Projects In Development</h2>
 
-        <!-- Project 1: Real-Time Fraud Detection -->
-        <div class="project-card">
-            <h3>Real-Time E-Commerce Fraud Detection Pipeline</h3>
-            <p class="project-meta">
-                <strong>Status:</strong> In Progress | 
-                <strong>Technologies:</strong> Python, Kafka, Spark Streaming, AWS, PostgreSQL, Redis, Docker
-            </p>
-            
-            <p>Building a real-time fraud detection system to process e-commerce transactions and identify suspicious activity as it occurs. The pipeline uses Apache Kafka for data streaming, Spark Streaming for real-time processing, and a dual-storage architecture with PostgreSQL for transaction history and Redis for high-speed lookups.</p>
-            
-            <p>Implementing fraud detection algorithms that analyze transaction velocity, geographic patterns, purchase amounts, and behavioral anomalies. The system combines rule-based detection with statistical analysis to flag high-risk transactions for review.</p>
-            
-            <p><strong>Current Status:</strong> Developing core pipeline architecture and fraud detection logic. Performance metrics and results will be documented upon project completion.</p>
+        <div class="project">
+            <h3>E-Commerce Analytics Pipeline</h3>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <strong>Status:</strong> <span class="status">In Progress</span>
+                </div>
+                <div class="meta-item">
+                    <span class="tech-tags"><strong>Technologies:</strong> Python, Apache Airflow, PostgreSQL, AWS S3, Docker, Pandas, SQL</span>
+                </div>
+            </div>
+            <p>Building an end-to-end data pipeline that extracts e-commerce data from multiple sources including the Kaggle Olist Brazilian E-commerce dataset and synthetically generated clickstream events. The pipeline transforms raw data to calculate key business metrics such as conversion rates, customer lifetime value, revenue by product category, and cohort retention analysis.</p>
+            <p>Implementing automated ETL workflows using Apache Airflow for orchestration, with data validation checks at each stage to ensure quality. The system handles incremental loading strategies, deduplication logic, and stores processed data in a PostgreSQL warehouse optimized for analytical queries. Includes comprehensive error handling, logging, and monitoring dashboards to track pipeline health and data freshness.</p>
+            <div class="current-status">
+                <strong>Current Status:</strong> Developing data ingestion modules and transformation logic. Working on Airflow DAG implementation for automated scheduling and dependency management.
+            </div>
         </div>
 
-        <hr style="margin: 3rem 0; border: none; border-top: 1px solid #e0e0e0;">
+        <hr>
 
-        <!-- Project 2: Database Optimization Study -->
-        <div class="project-card">
+        <div class="project">
+            <h3>Multi-Source Analytics Data Warehouse</h3>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <strong>Status:</strong> <span class="status">Planned</span>
+                </div>
+                <div class="meta-item">
+                    <span class="tech-tags"><strong>Technologies:</strong> AWS Redshift, Python, dbt, SQL, GitHub API, Apache Airflow, Docker</span>
+                </div>
+            </div>
+            <p>Planning a unified cloud data warehouse that integrates data from multiple disparate sources: e-commerce transactions, CRM customer interactions, marketing campaign metrics from GitHub API, and web server logs. The project will implement a dimensional modeling approach with star schema design, featuring fact tables for transactions and events, and dimension tables for customers, products, time, and channels.</p>
+            <p>Will use dbt (data build tool) for transformation layer to create modular, tested, and documented data models. The warehouse will implement slowly changing dimensions (SCD Type 2) to track historical changes, partition strategies for query optimization, and materialized views for frequently accessed aggregations. Includes role-based access control and a semantic layer to provide business users with a single source of truth for analytics.</p>
+            <div class="current-status">
+                <strong>Current Status:</strong> Designing warehouse schema and dimensional models. Researching best practices for multi-source data integration and developing data source connection strategies.
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="project">
             <h3>Database Performance Optimization Study</h3>
-            <p class="project-meta">
-                <strong>Status:</strong> Planned | 
-                <strong>Technologies:</strong> PostgreSQL, ClickHouse, Python, Docker, Jupyter Notebooks
-            </p>
-            
-            <p>Planning a comprehensive performance comparison of row-based (PostgreSQL) and columnar (ClickHouse) database architectures for analytics workloads. The study will use large-scale datasets to systematically evaluate query performance, storage efficiency, and optimization strategies.</p>
-            
-            <p>Will test multiple optimization techniques including indexing strategies, partitioning schemes, compression algorithms, and query tuning approaches. The research will measure performance across different workload patterns and data scales to understand real-world behavior and trade-offs.</p>
-            
-            <p><strong>Current Status:</strong> Research design and methodology in development. Benchmarking framework and detailed results will be published upon completion.</p>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <strong>Status:</strong> <span class="status">Planned</span>
+                </div>
+                <div class="meta-item">
+                    <span class="tech-tags"><strong>Technologies:</strong> PostgreSQL, ClickHouse, Python, Docker, Jupyter Notebooks, TPC-H Benchmark</span>
+                </div>
+            </div>
+            <p>Planning a comprehensive performance comparison of row-based (PostgreSQL) and columnar (ClickHouse) database architectures for analytics workloads using the industry-standard TPC-H benchmark dataset. The study will systematically evaluate query performance, storage efficiency, compression ratios, and memory utilization across different data scales ranging from 1GB to 100GB.</p>
+            <p>Will test multiple optimization techniques including indexing strategies (B-tree, hash, bloom filters), partitioning schemes (range, list, hash), compression algorithms, and query tuning approaches. The research will measure performance across various analytical query patterns such as aggregations, joins, time-series analysis, and complex multi-table queries. Results will be documented with detailed execution plans, performance metrics, and recommendations for when to use each database architecture.</p>
+            <div class="current-status">
+                <strong>Current Status:</strong> Research design and methodology in development. Setting up Docker environments for both databases and preparing TPC-H data generation scripts. Benchmarking framework and detailed results will be published upon completion.
+            </div>
         </div>
-        <hr style="margin: 3rem 0; border: none; border-top: 1px solid #e0e0e0;">
 
-        <!-- Project 3: -->
-        <div class="project-card">
-            <h3>Project 3</h3>
-            <p class="project-meta">
-                <strong>Status:</strong> In Progress | 
-                <strong>Technologies:</strong> 
-            </p>
-            
-            <p> </p>
-            
-            <p> </p>
-            
-            <p><strong>Current Status:</strong></p>
-        </div>
-        <hr style="margin: 3rem 0; border: none; border-top: 1px solid #e0e0e0;">
+        <hr>
+    </main>
 
-    <!-- Footer -->
     <footer>
-        <p>© 2026 Edgar Samuel Moya. All rights reserved.</p>
-        <p style="margin-top: 0.5rem; opacity: 0.8;">University of California, Merced</p>
+        <p>&copy; 2026 Edgar Samuel Moya. All rights reserved.</p>
+        <p>University of California, Merced</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

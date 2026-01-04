@@ -1,109 +1,304 @@
-<!-- ==================== research.html ==================== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research - Edgar Samuel Moya</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 3rem;
+        }
+
+        .research-item {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .research-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .research-item h3 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .research-meta {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .research-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .section-title {
+            font-weight: 600;
+            color: #3498db;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .research-item p, .research-item ul {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .research-item ul {
+            padding-left: 1.5rem;
+        }
+
+        .research-item li {
+            margin-bottom: 0.5rem;
+        }
+
+        .pi {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ecf0f1;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background-color: #3498db;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #2c3e50;
+                padding: 1rem;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
-        <div class="container">
-            <div class="logo"></div>
-            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        <div class="nav-content">
+            <button class="nav-toggle" onclick="toggleMenu()">☰</button>
             <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <!--<li><a href="certifications.html">Certifications</a></li>  -->
+                <!--<li><a href="certifications.html">Certifications</a></li>-->
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <div class="page-header">
+    <div class="container">
         <h1>Research Experience</h1>
-        <p>Explore my ongoing research projects and academic contributions</p>
+        <p class="subtitle">Explore my ongoing research projects and academic contributions</p>
+
+        <div class="research-item">
+            <h3>Real-Time E-Commerce Fraud Detection Pipeline</h3>
+            <div class="research-meta">
+                <span>📍 Los Angeles, California</span>
+                <span>📅 January 2026 - Present</span>
+            </div>
+
+            <p class="section-title">Research Focus:</p>
+            <p>Developing a production-grade real-time fraud detection system for e-commerce transactions using distributed streaming architecture. The system processes high-velocity transaction streams through Apache Kafka, analyzes patterns using Spark Streaming, and maintains dual-storage architecture with PostgreSQL for historical analysis and Redis for sub-millisecond lookups. The research investigates the effectiveness of combining rule-based detection with statistical anomaly detection to identify fraudulent activity with minimal latency.</p>
+
+            <p class="section-title">Key Contributions:</p>
+            <ul>
+                <li>Architected end-to-end streaming pipeline capable of processing 10,000+ transactions per second with sub-100ms detection latency using Kafka and Spark Streaming.</li>
+                <li>Implemented multi-layered fraud detection algorithms analyzing transaction velocity, geographic anomalies, spending patterns, and behavioral deviations using statistical methods including z-score analysis and time-series pattern recognition.</li>
+                <li>Designed dual-storage architecture leveraging PostgreSQL for transaction history and audit trails, and Redis for real-time user profiling and velocity tracking with TTL-based data management.</li>
+                <li>Deployed containerized microservices architecture using Docker and Docker Compose for reproducible development environments and scalable deployment.</li>
+                <li>Generated synthetic transaction datasets with realistic fraud patterns (velocity attacks, geographic anomalies, amount outliers) to train and validate detection models.</li>
+            </ul>
+
+            <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Apache Kafka</span>
+                <span class="tech-tag">Spark Streaming</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Redis</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">AWS</span>
+                <span class="tech-tag">Statistical Modeling</span>
+            </div>
+
+            <p class="pi">Independent Research Project</p>
+        </div>
+
+        <div class="research-item">
+            <h3>Seismicity Modeling with Extreme Value Theory</h3>
+            <div class="research-meta">
+                <span>📍 Bloomington, Indiana</span>
+                <span>📅 May 2025 - August 2025</span>
+            </div>
+
+            <p class="section-title">Research Focus:</p>
+            <p>Applied Extreme Value Theory to quantify seismic hazard in Veracruz State, Mexico, using over a century of earthquake data from the National Seismic Service. The research implemented a dual-modeling framework combining the Generalized Extreme Value Distribution for annual block maxima and the Generalized Pareto Distribution for threshold exceedances. The model revealed that a magnitude 7.0 earthquake has approximately a 12.8% probability of occurring within 50 years.</p>
+
+            <p class="section-title">Key Contributions:</p>
+            <ul>
+                <li>Led statistical modeling and diagnostic validation, including threshold selection via mean residual life plots and parameter stability analysis.</li>
+                <li>Conducted comprehensive data preprocessing involving declustering of aftershock sequences and standardization of 6,121 seismic events.</li>
+                <li>Successfully estimated 10, 50, and 100-year return levels, providing actionable insights for civil engineering design standards and emergency preparedness policy in tectonically active regions.</li>
+            </ul>
+
+            <p class="pi">Principal Investigators: Dr. Javier Rojo | Dr. Sergio Juarez</p>
+        </div>
+
+        <div class="research-item">
+            <h3>Exploring Sense of Belonging in the Central Valley</h3>
+            <div class="research-meta">
+                <span>📍 Merced, California</span>
+                <span>📅 June 2024 - August 2024</span>
+            </div>
+
+            <p class="section-title">Research Focus:</p>
+            <p>This study investigates the multifaceted factors influencing the sense of belonging among students within California's Central Valley. By examining demographic, socioeconomic, and institutional variables through mixed-methods research, the study aims to identify key predictors of student retention and academic success in these underserved communities.</p>
+
+            <p class="section-title">Key Contributions:</p>
+            <ul>
+                <li>Conducted qualitative interviews and quantitative surveys to capture diverse student experiences.</li>
+                <li>Analyzed data using statistical modeling techniques to uncover patterns in campus climate perceptions.</li>
+                <li>Findings will inform university policies and interventions designed to improve student engagement and retention rates.</li>
+            </ul>
+
+            <p class="pi">Principal Investigator: Dr. Lindsay Crawford</p>
+        </div>
     </div>
 
-    <!-- Research Content -->
-    <section class="content-section">
-        <div class="research-list">
-            <div class="item-card">
-                <h3>Project Title</h3>
-                <p class="meta">Location | Date</p>
-                
-                <p><strong>Research Focus:</strong></p>
-                <p>
-                    /
-                </p>
-                
-                <p><strong>Key Contributions:</strong></p>
-                <p>
-                    /
-                </p>
-                
-                <p class="recognition">
-                    <em>Principle Investigator: Name </em>
-                </p>
-            </div>
-
-            <div class="item-card">
-                <h3>Seismicity Modeling with Extreme Value Theory</h3>
-                <p class="meta">Bloomington, Indiana | May 2025 - August 2025</p>
-                
-                <p><strong>Research Focus:</strong></p>
-                <p>
-                    Applied Extreme Value Theory to quantify seismic hazard in Veracruz State, Mexico, using over a century of earthquake data from the National Seismic Service. 
-                    The research implemented a dual-modeling framework combining the Generalized Extreme Value Distribution for annual block maxima and the Generalized Pareto Distribution for threshold exceedances.
-                    The model revealed that a magnitude 7.0 earthquake has approximately a 12.8% probability of occurring within 50 years.
-                </p>
-                
-                <p><strong>Key Contributions:</strong></p>
-                <p>
-                    Led statistical modeling and diagnostic validation, including threshold selection via mean residual life plots and parameter stability analysis. 
-                    Conducted comprehensive data preprocessing involving declustering of aftershock sequences and standardization of 6,121 seismic events. 
-                    Successfully estimated 10, 50, and 100-year return levels, providing actionable insights for civil engineering design standards and emergency preparedness policy in tectonically active regions.
-                </p>
-                
-                <p class="recognition">
-                    <em>Principle Investigator: Dr. Javier Rojo | Dr. Sergio Juarez</em>
-                </p>
-            </div>
-            
-            <div class="item-card">
-                <h3>Exploring Sense of Belonging in the Central Valley</h3>
-                <p class="meta">Merced, California | June 2024 - August 2024</p>
-                
-                <p><strong>Research Focus:</strong></p>
-                <p>
-                    This study investigates the multifaceted factors influencing the sense of belonging among students within California's Central Valley. By examining demographic, socioeconomic, and institutional variables through mixed-methods research, the study aims to identify key predictors of student retention and academic success in these underserved communities.
-                </p>
-                
-                <p><strong>Key Contributions:</strong></p>
-                <p>
-                    Conducted qualitative interviews and quantitative surveys to capture diverse student experiences. 
-                    Analyzed data using statistical modeling techniques to uncover patterns in campus climate perceptions. 
-                    Findings will inform university policies and interventions designed to improve student engagement and retention rates.
-                </p>
-                
-                <p class="recognition">
-                    <em>Principle Investigator: Dr. Lindsay Crawford</em>
-                </p>
-            </div>
-        </div>
-    </section> 
-
-    <!-- Footer -->
     <footer>
         <p>© 2026 Edgar Samuel Moya. All rights reserved.</p>
-        <p style="margin-top: 0.5rem; opacity: 0.8;">University of California, Merced</p>
+        <p>University of California, Merced</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
