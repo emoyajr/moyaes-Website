@@ -68,7 +68,7 @@
 
         h1 {
             font-size: 2.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             color: #2c3e50;
         }
 
@@ -80,11 +80,12 @@
 
         .research-item {
             background: white;
-            padding: 2rem;
-            margin-bottom: 2rem;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid #3498db;
         }
 
         .research-item:hover {
@@ -92,70 +93,107 @@
             box-shadow: 0 5px 20px rgba(0,0,0,0.15);
         }
 
+        .research-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #ecf0f1;
+        }
+
         .research-item h3 {
             font-size: 1.8rem;
             color: #2c3e50;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
         }
 
         .research-meta {
             color: #7f8c8d;
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
+            font-size: 1rem;
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
-        }
-
-        .research-meta span {
-            display: inline-flex;
             align-items: center;
-            gap: 0.3rem;
         }
 
-        .section-title {
-            font-weight: 600;
-            color: #3498db;
-            margin-top: 1.5rem;
-            margin-bottom: 0.8rem;
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .meta-icon {
             font-size: 1.1rem;
         }
 
-        .research-item p, .research-item ul {
-            margin-bottom: 1rem;
+        .section-label {
+            font-weight: 700;
+            color: #2c3e50;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .research-content {
             color: #555;
+            font-size: 1.05rem;
+            line-height: 1.8;
         }
 
-        .research-item ul {
-            padding-left: 1.5rem;
+        .research-content p {
+            margin-bottom: 1rem;
         }
 
-        .research-item li {
-            margin-bottom: 0.5rem;
+        .contributions-list {
+            list-style: none;
+            padding: 0;
         }
 
-        .pi {
+        .contributions-list li {
+            padding: 0.8rem 0 0.8rem 1.5rem;
+            position: relative;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .contributions-list li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .pi-info {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid #ecf0f1;
             font-style: italic;
             color: #7f8c8d;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid #ecf0f1;
+            font-size: 0.95rem;
+        }
+
+        .pi-label {
+            font-weight: 600;
+            color: #555;
         }
 
         .tech-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
+            gap: 0.6rem;
+            margin-top: 1.5rem;
         }
 
         .tech-tag {
-            background-color: #3498db;
-            color: white;
-            padding: 0.3rem 0.8rem;
+            background-color: #e8f4f8;
+            color: #2c3e50;
+            padding: 0.4rem 1rem;
             border-radius: 20px;
             font-size: 0.85rem;
-            font-weight: 500;
+            font-weight: 600;
+            border: 1px solid #3498db;
         }
 
         footer {
@@ -164,6 +202,10 @@
             text-align: center;
             padding: 2rem;
             margin-top: 4rem;
+        }
+
+        footer p {
+            margin: 0.3rem 0;
         }
 
         @media (max-width: 768px) {
@@ -193,6 +235,16 @@
             .container {
                 padding: 2rem 1rem;
             }
+
+            .research-item {
+                padding: 1.5rem;
+            }
+
+            .research-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
         }
     </style>
 </head>
@@ -211,46 +263,115 @@
         </div>
     </nav>
 
-
+    <div class="container">
+        <h1>Research Experience</h1>
+        <p class="subtitle">Explore my ongoing research projects and academic contributions</p>
 
         <div class="research-item">
-            <h3>Seismicity Modeling with Extreme Value Theory</h3>
-            <div class="research-meta">
-                <span>Location: Bloomington, Indiana</span>
-                <span>Date: May 2025 - August 2025</span>
+            <div class="research-header">
+                <h3>TBD Research</h3>
+                <div class="research-meta">
+                    <span class="meta-item">
+                        <span class="meta-icon">Location:</span>
+                        Los Angeles, California
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">Period:</span>
+                        January 2026 - Present
+                    </span>
+                </div>
             </div>
 
-            <p class="section-title">Research Focus:</p>
-            <p>Applied Extreme Value Theory to quantify seismic hazard in Veracruz State, Mexico, using over a century of earthquake data from the National Seismic Service. The research implemented a dual-modeling framework combining the Generalized Extreme Value Distribution for annual block maxima and the Generalized Pareto Distribution for threshold exceedances. The model revealed that a magnitude 7.0 earthquake has approximately a 12.8% probability of occurring within 50 years.</p>
+            <div class="research-content">
+                <div class="section-label">Research Focus</div>
+                <p> N/A</p>
 
-            <p class="section-title">Key Contributions:</p>
-            <ul>
-                <li>Led statistical modeling and diagnostic validation, including threshold selection via mean residual life plots and parameter stability analysis.</li>
-                <li>Conducted comprehensive data preprocessing involving declustering of aftershock sequences and standardization of 6,121 seismic events.</li>
-                <li>Successfully estimated 10, 50, and 100-year return levels, providing actionable insights for civil engineering design standards and emergency preparedness policy in tectonically active regions.</li>
-            </ul>
+                <div class="section-label">Key Contributions</div>
+                <ul class="contributions-list">
+                    <li>/</li>
+                    <li>/</li>
+                    <li>/</li>
+                    <li>/</li>
+                </ul>
 
-            <p class="pi">Principal Investigators: Dr. Javier Rojo | Dr. Sergio Juarez</p>
+                <!--<div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Apache Kafka</span>
+                    <span class="tech-tag">Spark Streaming</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Redis</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">AWS</span>
+                </div>-->
+            </div>
+
+            <div class="pi-info">
+                <span class="pi-label">Independent Research Project</span>
+            </div>
         </div>
 
         <div class="research-item">
-            <h3>Exploring Sense of Belonging in the Central Valley</h3>
-            <div class="research-meta">
-                <span>Location: Merced, California</span>
-                <span>Date: June 2024 - August 2024</span>
+            <div class="research-header">
+                <h3>Seismicity Modeling with Extreme Value Theory</h3>
+                <div class="research-meta">
+                    <span class="meta-item">
+                        <span class="meta-icon">Location:</span>
+                        Bloomington, Indiana
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">Period:</span>
+                        May 2025 - August 2025
+                    </span>
+                </div>
             </div>
 
-            <p class="section-title">Research Focus:</p>
-            <p>This study investigates the multifaceted factors influencing the sense of belonging among students within California's Central Valley. By examining demographic, socioeconomic, and institutional variables through mixed-methods research, the study aims to identify key predictors of student retention and academic success in these underserved communities.</p>
+            <div class="research-content">
+                <div class="section-label">Research Focus</div>
+                <p>Applied Extreme Value Theory to quantify seismic hazard in Veracruz State, Mexico, using over a century of earthquake data from the National Seismic Service. The research implemented a dual-modeling framework combining the Generalized Extreme Value Distribution for annual block maxima and the Generalized Pareto Distribution for threshold exceedances. The model revealed that a magnitude 7.0 earthquake has approximately a 12.8% probability of occurring within 50 years.</p>
 
-            <p class="section-title">Key Contributions:</p>
-            <ul>
-                <li>Conducted qualitative interviews and quantitative surveys to capture diverse student experiences.</li>
-                <li>Analyzed data using statistical modeling techniques to uncover patterns in campus climate perceptions.</li>
-                <li>Findings will inform university policies and interventions designed to improve student engagement and retention rates.</li>
-            </ul>
+                <div class="section-label">Key Contributions</div>
+                <ul class="contributions-list">
+                    <li>Led statistical modeling and diagnostic validation, including threshold selection via mean residual life plots and parameter stability analysis.</li>
+                    <li>Conducted comprehensive data preprocessing involving declustering of aftershock sequences and standardization of 6,121 seismic events.</li>
+                    <li>Successfully estimated 10, 50, and 100-year return levels, providing actionable insights for civil engineering design standards and emergency preparedness policy in tectonically active regions.</li>
+                </ul>
+            </div>
 
-            <p class="pi">Principal Investigator: Dr. Lindsay Crawford</p>
+            <div class="pi-info">
+                <span class="pi-label">Principal Investigators:</span> Dr. Javier Rojo | Dr. Sergio Juarez
+            </div>
+        </div>
+
+        <div class="research-item">
+            <div class="research-header">
+                <h3>Exploring Sense of Belonging in the Central Valley</h3>
+                <div class="research-meta">
+                    <span class="meta-item">
+                        <span class="meta-icon">Location:</span>
+                        Merced, California
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">Period:</span>
+                        June 2024 - August 2024
+                    </span>
+                </div>
+            </div>
+
+            <div class="research-content">
+                <div class="section-label">Research Focus</div>
+                <p>This study investigates the multifaceted factors influencing the sense of belonging among students within California's Central Valley. By examining demographic, socioeconomic, and institutional variables through mixed-methods research, the study aims to identify key predictors of student retention and academic success in these underserved communities.</p>
+
+                <div class="section-label">Key Contributions</div>
+                <ul class="contributions-list">
+                    <li>Conducted qualitative interviews and quantitative surveys to capture diverse student experiences.</li>
+                    <li>Analyzed data using statistical modeling techniques to uncover patterns in campus climate perceptions.</li>
+                    <li>Findings will inform university policies and interventions designed to improve student engagement and retention rates.</li>
+                </ul>
+            </div>
+
+            <div class="pi-info">
+                <span class="pi-label">Principal Investigator:</span> Dr. Lindsay Crawford
+            </div>
         </div>
     </div>
 
