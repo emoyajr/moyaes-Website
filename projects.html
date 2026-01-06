@@ -215,21 +215,42 @@
         <h2>Projects In Development</h2>
 
         <div class="project">
-            <h3>E-Commerce Analytics Pipeline</h3>
+            <h3>Urban Mobility & Transportation Optimizer</h3>
             <div class="project-meta">
                 <div class="meta-item">
-                    <strong>Status:</strong> <span class="status">Planned</span>
+                    <strong>Status:</strong> <span class="status">In Progress</span>
                 </div>
                 <div class="meta-item">
                     <span class="tech-tags"><strong>Technologies:</strong> Python, Apache Airflow, PostgreSQL, AWS S3, Docker, Pandas, SQL</span>
                 </div>
             </div>
-            <p>Building an end-to-end data pipeline that extracts e-commerce data from multiple sources including the Kaggle Olist Brazilian E-commerce dataset and synthetically generated clickstream events. The pipeline transforms raw data to calculate key business metrics such as conversion rates, customer lifetime value, revenue by product category, and cohort retention analysis.</p>
-            <p>Implementing automated ETL workflows using Apache Airflow for orchestration, with data validation checks at each stage to ensure quality. The system handles incremental loading strategies, deduplication logic, and stores processed data in a PostgreSQL warehouse optimized for analytical queries. Includes comprehensive error handling, logging, and monitoring dashboards to track pipeline health and data freshness.</p>
+            <p>Building an end-to-end real-time data pipeline that processes live transportation data to help optimize commute decisions. The system integrates multiple data sources including public transit GPS locations, bike-share availability APIs, and weather data through a Lambda Architecture combining both streaming and batch processing layers.</p>
+            <p>Implementing Apache Kafka for real-time event streaming to capture live vehicle positions and availability updates every 30 seconds. The pipeline processes geospatial data to calculate optimal routes, predict delays using machine learning models, and provide real-time recommendations. Apache Airflow orchestrates daily batch jobs for historical pattern analysis, ML model retraining, and data warehouse updates.</p>
+            <p>The system features a multi-layered storage architecture: PostgreSQL for operational data (current vehicle states), S3 data lake for raw event storage, and Snowflake for analytical queries on historical patterns. Includes comprehensive monitoring, data quality validation, and an interactive Streamlit dashboard displaying live transportation status with predictive delay alerts and multimodal route recommendations.</p>
             <div class="current-status">
-                <strong>Current Status:</strong> Developing data ingestion modules and transformation logic. Working on Airflow DAG implementation for automated scheduling and dependency management.
+                <strong>Current Status:</strong> In early development phase - setting up Kafka infrastructure and integrating initial data sources.
+</div>
             </div>
         </div>
+
+        <div class="project">
+            <h3>Database Performance Optimization Study</h3>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <strong>Status:</strong> <span class="status">Planned</span>
+                </div>
+                <div class="meta-item">
+                    <span class="tech-tags"><strong>Technologies:</strong> PostgreSQL, ClickHouse, Python, Docker, Jupyter Notebooks, TPC-H Benchmark</span>
+                </div>
+            </div>
+            <p>Planning a comprehensive performance comparison of row-based (PostgreSQL) and columnar (ClickHouse) database architectures for analytics workloads using the industry-standard TPC-H benchmark dataset. The study will systematically evaluate query performance, storage efficiency, compression ratios, and memory utilization across different data scales ranging from 1GB to 100GB.</p>
+            <p>Will test multiple optimization techniques including indexing strategies (B-tree, hash, bloom filters), partitioning schemes (range, list, hash), compression algorithms, and query tuning approaches. The research will measure performance across various analytical query patterns such as aggregations, joins, time-series analysis, and complex multi-table queries. Results will be documented with detailed execution plans, performance metrics, and recommendations for when to use each database architecture.</p>
+            <div class="current-status">
+                <strong>Current Status:</strong> Research design and methodology in development. Setting up Docker environments for both databases and preparing TPC-H data generation scripts. Benchmarking framework and detailed results will be published upon completion.
+            </div>
+        </div>
+
+        <hr>
 
         <hr>
 
@@ -247,25 +268,6 @@
             <p>Will use dbt (data build tool) for transformation layer to create modular, tested, and documented data models. The warehouse will implement slowly changing dimensions (SCD Type 2) to track historical changes, partition strategies for query optimization, and materialized views for frequently accessed aggregations. Includes role-based access control and a semantic layer to provide business users with a single source of truth for analytics.</p>
             <div class="current-status">
                 <strong>Current Status:</strong> Designing warehouse schema and dimensional models. Researching best practices for multi-source data integration and developing data source connection strategies.
-            </div>
-        </div>
-
-        <hr>
-
-        <div class="project">
-            <h3>Database Performance Optimization Study</h3>
-            <div class="project-meta">
-                <div class="meta-item">
-                    <strong>Status:</strong> <span class="status">In Progress</span>
-                </div>
-                <div class="meta-item">
-                    <span class="tech-tags"><strong>Technologies:</strong> PostgreSQL, ClickHouse, Python, Docker, Jupyter Notebooks, TPC-H Benchmark</span>
-                </div>
-            </div>
-            <p>Planning a comprehensive performance comparison of row-based (PostgreSQL) and columnar (ClickHouse) database architectures for analytics workloads using the industry-standard TPC-H benchmark dataset. The study will systematically evaluate query performance, storage efficiency, compression ratios, and memory utilization across different data scales ranging from 1GB to 100GB.</p>
-            <p>Will test multiple optimization techniques including indexing strategies (B-tree, hash, bloom filters), partitioning schemes (range, list, hash), compression algorithms, and query tuning approaches. The research will measure performance across various analytical query patterns such as aggregations, joins, time-series analysis, and complex multi-table queries. Results will be documented with detailed execution plans, performance metrics, and recommendations for when to use each database architecture.</p>
-            <div class="current-status">
-                <strong>Current Status:</strong> Research design and methodology in development. Setting up Docker environments for both databases and preparing TPC-H data generation scripts. Benchmarking framework and detailed results will be published upon completion.
             </div>
         </div>
 
